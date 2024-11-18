@@ -2,20 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.post-content h2 {
+  color: #0e0a1b;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 46.2px;
+  padding: 20px 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.post-content h3 {
+  color: #0e0a1b;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 46.2px;
+  padding: 20px 0;
+}
+
+.post-content h4 {
+  color: #0e0a1b;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 46.2px;
+  padding: 20px 0;
+}
+.post-content ol li {
+  padding: 10px 0;
+}
+.post-content p img {
+  margin: 0 0 20px 0;
+  border-radius: 13px;
+  border: 1px solid #f3f3f4;
+}
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.post-content table th,
+.post-content table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.post-content table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.post-content table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.post-content p a {
+  color: #0294ff;
+}
+.post-content ul#table-of-contents {
+  border-radius: 10px;
+  border-top: 6px solid #02d6e1;
+  background: #fff;
+  padding: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.post-content ul.table-of-contents li a {
+  color: #0e0b3d;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.text-white {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .post-content h2 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  .post-content h3 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .post-content h4 {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .max-container {
+    @apply mx-auto max-w-[1220px];
+  }
+  .padding-container {
+    @apply px-6 lg:px-20;
+  }
+  .section-bg-light {
+    background-color: #ffffff;
+  }
+  .section-bg-dark {
+    background-color: #150425;
+  }
 }
